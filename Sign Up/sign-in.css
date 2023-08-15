@@ -1,0 +1,83 @@
+html,
+body {
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
+  background-image: url('./public/DayWinterBG.png'); /* Set background image */
+  background-size: cover; /* Cover the entire viewport with the background image */
+  background-repeat: no-repeat; /* No repeating of the background image */
+  background-position: center center; /* Center the background image */
+  background-attachment: fixed; /* Keep the background fixed relative to the viewport */
+  height: 100vh;
+}
+
+
+
+#side-in-form{
+  position: relative;
+  display: flex;
+  text-align: center;
+}
+
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 98vh;
+}
+
+.custom-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  width: 50%; /* Adjust the width as needed */
+  margin: auto; /* Center the form container */
+  padding: 20px; /* Add padding for better readability */
+  position: relative;
+
+}
+
+.custom-form-container {
+  background-color: white;
+  padding: 50px; /* Adjust padding as needed */
+  flex: 1; /* Allow the form container to grow to fill the available space */
+  border-radius: 30px;
+}
+
+.custom-form {
+  text-align: center; /* Align form elements to the right */
+}
+
+.form-signin {
+  max-width: 530px;
+  padding: 1px;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 3;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#bottom-cr {
+  position: fixed;
+  height: -100vh;
+  bottom: 0; /* Adjust the distance from the bottom */
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  opacity: 0.2;
+}
+
