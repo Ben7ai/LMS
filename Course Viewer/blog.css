@@ -1,0 +1,198 @@
+/* stylelint-disable stylistic/selector-list-comma-newline-after */
+
+.blog-header-logo {
+  font-family: "Amiri", Georgia, "Times New Roman",
+    serif /*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+  font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+#header-catcher {
+  background-color: #9b1a1a31;
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  padding-bottom: 3rem;
+  color: rgb(var(--bs-tertiary-color-rgb));
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%; /* Make sure the caption takes the full height of the carousel item */
+}
+
+.carousel-caption h1 {
+  color: white;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 20rem;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+}
+/* rtl:end:ignore */
+
+/* Featurettes
+------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+}
+
+/* The `#navigation-header` selector is targeting an element with the id "navigation-header" in the
+HTML markup. It sets the color of the text to "aliceblue", the font size to "30px", and applies
+flexbox properties to center the element both horizontally and vertically within its container. */
+#navigation-header {
+  color: aliceblue;
+  font-size: 30px;
+  position: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The CSS code `.carousel-inner .carousel-item .overlay` is targeting an element with the class
+"overlay" that is a descendant of an element with the class "carousel-item" which is a descendant of
+an element with the class "carousel-inner". */
+.carousel-inner .carousel-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0); /* Fully transparent initially */
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Set the hover effect */
+.carousel-inner .carousel-item:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black on hover */
+}
+
+/* Additional styles for better visibility of the caption text on hover */
+.carousel-inner .carousel-item:hover .carousel-caption {
+  opacity: 1;
+  /* Add other styles as needed */
+}
+
+.custom-card {
+  display: flex;
+  width: 100%; /* Card stretches with the page */
+  /* You can adjust the height as needed */
+}
+
+.custom-card .thumbnail-container {
+  display: flex;
+  align-items: center; /* Center vertically */
+  padding: 15px;
+}
+
+.custom-card img {
+  width: 80px; /* Adjust the thumbnail width */
+  height: 80px; /* Adjust the thumbnail height */
+  object-fit: cover; /* Maintain aspect ratio and cover the available space */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.custom-card .card-content {
+  flex: 1;
+  padding: 15px;
+}
+
+.activity-box {
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.activity-icon {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.btn-success {
+  /* Adjust button styling if needed */
+}
+
+.activity-image {
+  margin-right: 10px;
+  padding-top: 5px; /* Add padding to the top */
+}
+
+.activityname {
+  padding-top: 5px; /* Add padding to the top */
+}
+
+.flex-auto {
+  flex: 0 0 auto;
+}
+
+.h-250 {
+  height: 250px;
+}
+@media (min-width: 768px) {
+  .h-md-250 {
+    height: 250px;
+  }
+}
+
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+
+/*
+ * Blog posts
+ */
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #727272;
+}
+
+#navbar-brand {
+  position: center;
+}
+
+#bottom-cr {
+  opacity: 0.5;
+}
