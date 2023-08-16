@@ -41,6 +41,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM signup WHERE Email = ?')) {
             session_regenerate_id();
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['id'] = $id;
+            $_SESSION['email'] = $_POST['Email'] ;
             header('Location: home.html');
             
         } else {

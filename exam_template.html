@@ -18,541 +18,528 @@
       <button id="next-button" class="next-button">Next</button>
     </div>
     <script>
-         const quizQuestions = [
-         {
-             question: "1.) What is the purpose of a VPN (Virtual Private Network)?",
-             answers: [
-               "a.) To create a secure and encrypted connection over a public network",
-               "b.) To store large amounts of data",
-               "c.) To host websites"
-             ],
-             correct: 0
-           },
-           {
-             question: "2.) What is a rootkit?",
-             answers: [
-               "a.) A type of malware that grants unauthorized access to a system",
-               "b.) A programming language for web development",
-               "c.) A type of encryption algorithm"
-             ],
-             correct: 0
-           },
-           {
-             question: "3.) What is a loop in programming?",
-             answers: [
-               "a.) A type of variable",
-               "b.) A statement used to terminate a program",
-               "c.) A control structure that repeats a block of code multiple times"
-             ],
-             correct: 2
-           },
-           {
-             question: "4.) What is the concept of 'sandboxing' in cybersecurity?",
-             answers: [
-               "a.) Isolating potentially malicious software in a controlled environment",
-               "b.) Creating a virtual reality world",
-               "c.) A type of encryption technique"
-             ],
-             correct: 0
-           },
-           {
-             question: "5.) What is multi-factor authentication (MFA)?",
-             answers: [
-               "a.) Using multiple methods to verify a user's identity",
-               "b.) A programming language used in robotics",
-               "c.) A type of computer virus"
-             ],
-             correct: 0
-           },
-           {
-             question: "6.) What is phishing?",
-             answers: [
-               "a.) Sending fake emails to trick individuals into revealing sensitive information",
-               "b.) A type of wireless network",
-               "c.) A hardware component"
-             ],
-             correct: 0
-           },
-           {
-             question: "7.) What is the purpose of a biometric authentication system?",
-             answers: [
-               "a.) To verify a user's identity based on unique physical or behavioral traits",
-               "b.) To perform complex calculations",
-               "c.) To store software programs"
-             ],
-             correct: 0
-           },
-           {
-             question: "8.) What is a buffer overflow vulnerability?",
-             answers: [
-               "a.) When a program writes more data to a buffer than it can hold, causing memory corruption",
-               "b.) A hardware component used for data storage",
-               "c.) A type of encryption key"
-             ],
-             correct: 0
-           },
-           {
-             question: "9.) What is the role of a network firewall?",
-             answers: [
-               "a.) To filter and monitor incoming and outgoing network traffic",
-               "b.) To create virtual reality environments",
-               "c.) To store passwords securely"
-             ],
-             correct: 0
-           },
-           {
-             question: "10.) What is the difference between symmetric and asymmetric encryption?",
-             answers: [
-               "a.) Symmetric uses the same key for encryption and decryption, while asymmetric uses different keys",
-               "b.) They are two names for the same encryption method",
-               "c.) Symmetric is used for hardware encryption, while asymmetric is used for software encryption"
-             ],
-             correct: 0
-           },
-           {
-             question: "11.) What is a vulnerability assessment?",
-             answers: [
-               "a.) Identifying and evaluating weaknesses in a system's security",
-               "b.) A method for optimizing computer networks",
-               "c.) A type of programming language"
-             ],
-             correct: 0
-           },
-           {
-             question: "12.) What is the concept of 'least privilege' in cybersecurity?",
-             answers: [
-               "a.) Giving users only the minimum access rights needed to perform their tasks",
-               "b.) Giving users unlimited access rights",
-               "c.) Encrypting all data"
-             ],
-             correct: 0
-           },
-           {
-             question: "13.) What is the purpose of a digital certificate?",
-             answers: [
-               "a.) To verify the authenticity of a website's identity",
-               "b.) To encrypt emails",
-               "c.) To store hardware components"
-             ],
-             correct: 0
-           },
-           {
-             question: "14.) What is a brute-force attack?",
-             answers: [
-               "a.) Trying all possible combinations to guess a password",
-               "b.) Using a specific encryption algorithm",
-               "c.) A programming language for graphics"
-             ],
-             correct: 0
-           },
-           {
-             question: "15.) What is a SQL injection?",
-             answers: [
-               "a.) Injecting liquid into a computer",
-               "b.) A cyber attack where malicious SQL statements are inserted into an entry field",
-               "c.) A way to improve database performance"
-             ],
-             correct: 1
-           },
+      const quizQuestions = [
+        {
+          question:
+            "1.) What is the purpose of a VPN (Virtual Private Network)?",
+          answers: [
+            "a.) To create a secure and encrypted connection over a public network",
+            "b.) To store large amounts of data",
+            "c.) To host websites",
+          ],
+          correct: 0,
+        },
+        {
+          question: "2.) What is a rootkit?",
+          answers: [
+            "a.) A type of malware that grants unauthorized access to a system",
+            "b.) A programming language for web development",
+            "c.) A type of encryption algorithm",
+          ],
+          correct: 0,
+        },
+        {
+          question: "3.) What is a loop in programming?",
+          answers: [
+            "a.) A type of variable",
+            "b.) A statement used to terminate a program",
+            "c.) A control structure that repeats a block of code multiple times",
+          ],
+          correct: 2,
+        },
+        {
+          question: "4.) What is the concept of 'sandboxing' in cybersecurity?",
+          answers: [
+            "a.) Isolating potentially malicious software in a controlled environment",
+            "b.) Creating a virtual reality world",
+            "c.) A type of encryption technique",
+          ],
+          correct: 0,
+        },
+        {
+          question: "5.) What is multi-factor authentication (MFA)?",
+          answers: [
+            "a.) Using multiple methods to verify a user's identity",
+            "b.) A programming language used in robotics",
+            "c.) A type of computer virus",
+          ],
+          correct: 0,
+        },
+        {
+          question: "6.) What is phishing?",
+          answers: [
+            "a.) Sending fake emails to trick individuals into revealing sensitive information",
+            "b.) A type of wireless network",
+            "c.) A hardware component",
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            "7.) What is the purpose of a biometric authentication system?",
+          answers: [
+            "a.) To verify a user's identity based on unique physical or behavioral traits",
+            "b.) To perform complex calculations",
+            "c.) To store software programs",
+          ],
+          correct: 0,
+        },
+        {
+          question: "8.) What is a buffer overflow vulnerability?",
+          answers: [
+            "a.) When a program writes more data to a buffer than it can hold, causing memory corruption",
+            "b.) A hardware component used for data storage",
+            "c.) A type of encryption key",
+          ],
+          correct: 0,
+        },
+        {
+          question: "9.) What is the role of a network firewall?",
+          answers: [
+            "a.) To filter and monitor incoming and outgoing network traffic",
+            "b.) To create virtual reality environments",
+            "c.) To store passwords securely",
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            "10.) What is the difference between symmetric and asymmetric encryption?",
+          answers: [
+            "a.) Symmetric uses the same key for encryption and decryption, while asymmetric uses different keys",
+            "b.) They are two names for the same encryption method",
+            "c.) Symmetric is used for hardware encryption, while asymmetric is used for software encryption",
+          ],
+          correct: 0,
+        },
+        {
+          question: "11.) What is a vulnerability assessment?",
+          answers: [
+            "a.) Identifying and evaluating weaknesses in a system's security",
+            "b.) A method for optimizing computer networks",
+            "c.) A type of programming language",
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            "12.) What is the concept of 'least privilege' in cybersecurity?",
+          answers: [
+            "a.) Giving users only the minimum access rights needed to perform their tasks",
+            "b.) Giving users unlimited access rights",
+            "c.) Encrypting all data",
+          ],
+          correct: 0,
+        },
+        {
+          question: "13.) What is the purpose of a digital certificate?",
+          answers: [
+            "a.) To verify the authenticity of a website's identity",
+            "b.) To encrypt emails",
+            "c.) To store hardware components",
+          ],
+          correct: 0,
+        },
+        {
+          question: "14.) What is a brute-force attack?",
+          answers: [
+            "a.) Trying all possible combinations to guess a password",
+            "b.) Using a specific encryption algorithm",
+            "c.) A programming language for graphics",
+          ],
+          correct: 0,
+        },
+        {
+          question: "15.) What is a SQL injection?",
+          answers: [
+            "a.) Injecting liquid into a computer",
+            "b.) A cyber attack where malicious SQL statements are inserted into an entry field",
+            "c.) A way to improve database performance",
+          ],
+          correct: 1,
+        },
 
+        {
+          question:
+            "16. Which programming language is often used for developing mobile apps?",
+          answers: ["a.) Java", "b.) Ruby", "c.) PHP"],
+          correct: 0,
+        },
+        {
+          question: "17. What is the purpose of an IP address?",
+          answers: [
+            "a.) To identify a person's name",
+            "b.) To locate a website on the internet",
+            "c.) To store files on a computer",
+          ],
+          correct: 1,
+        },
+        {
+          question: "18. Which HTML tag is used to create a hyperlink?",
+          answers: ["a.) <link>", "b.) <a>", "c.) <hlink>"],
+          correct: 1,
+        },
+        {
+          question: "19. What does RAM stand for?",
+          answers: [
+            "a.) Read-After-Modification",
+            "b.) Random Access Memory",
+            "c.) Read-And-Memory",
+          ],
+          correct: 1,
+        },
+        {
+          question: "20. What is a 'bug' in programming?",
+          answers: [
+            "a.) An insect that disrupts code execution",
+            "b.) A feature that improves program performance",
+            "c.) An error in the program that causes unexpected behavior",
+          ],
+          correct: 2,
+        },
+        {
+          question: "21. What is the primary function of an operating system?",
+          answers: [
+            "a.) To display advertisements",
+            "b.) To manage computer hardware and software resources",
+            "c.) To play games",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "22. Which type of cyber attack involves flooding a network with excessive traffic to disrupt its normal operation?",
+          answers: [
+            "a.) Phishing",
+            "b.) Denial of Service (DoS)",
+            "c.) SQL Injection",
+          ],
+          correct: 1,
+        },
+        {
+          question: "23. In programming, what is a 'loop'?",
+          answers: [
+            "a.) A bug in the code",
+            "b.) A type of variable",
+            "c.) A control structure that repeats a block of code",
+          ],
+          correct: 2,
+        },
+        {
+          question: "24. Which tag is used to define an ordered list in HTML?",
+          answers: ["a.) <ul>", "b.) <ol>", "c.) <li>"],
+          correct: 1,
+        },
+        {
+          question: "25. What is encryption?",
+          answers: [
+            "a.) A way to make your computer run faster",
+            "b.) A method to make data unreadable by converting it into a secret code",
+            "c.) A way to organize files on your computer",
+          ],
+          correct: 1,
+        },
+        {
+          question: "26. What is the purpose of a 'cookie' in web development?",
+          answers: [
+            "a.) A delicious treat for programmers",
+            "b.) A small piece of data stored on a user's device to track information",
+            "c.) A type of programming language",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "27. What is a 'firewall' in the context of computer security?",
+          answers: [
+            "a.) A physical barrier to protect a computer from physical damage",
+            "b.) A software or hardware system that filters network traffic to block unauthorized access",
+            "c.) A type of computer virus",
+          ],
+          correct: 1,
+        },
+        {
+          question: "28. What is the purpose of a 'compiler'?",
+          answers: [
+            "a.) To convert high-level programming code into machine code",
+            "b.) To translate languages between users",
+            "c.) To enhance graphics in video games",
+          ],
+          correct: 0,
+        },
+        {
+          question: "29. What is 'phishing'?",
+          answers: [
+            "a.) The act of physically stealing computer hardware",
+            "b.) A method of fishing for information online",
+            "c.) Sending fake emails to trick individuals into revealing sensitive information",
+          ],
+          correct: 2,
+        },
+        {
+          question:
+            "30. Which programming language is often used for building web applications?",
+          answers: ["a.) Java", "b.) C++", "c.) JavaScript"],
+          correct: 2,
+        },
+        {
+          question: "31. What is 'SQL' used for in database management?",
+          answers: [
+            "a.) Designing graphics for websites",
+            "b.) Storing large files",
+            "c.) Managing and querying relational databases",
+          ],
+          correct: 2,
+        },
+        {
+          question: "32. What is 'HTTPS'?",
+          answers: [
+            "a.) A protocol for sending emails",
+            "b.) A secure version of HTTP used for encrypted communication over the internet",
+            "c.) A programming language for scripting",
+          ],
+          correct: 1,
+        },
+        {
+          question: "33. What does 'URL' stand for?",
+          answers: [
+            "a.) Universal Routing Language",
+            "b.) Uniform Resource Locator",
+            "c.) Unifying Relative Links",
+          ],
+          correct: 1,
+        },
+        {
+          question: "34. What is 'Open Source' software?",
+          answers: [
+            "a.) Software that is not available for public use",
+            "b.) Software whose source code is available to the public for use and modification",
+            "c.) Software that is only used for business purposes",
+          ],
+          correct: 1,
+        },
+        {
+          question: "35. What is 'cloud computing'?",
+          answers: [
+            "a.) Storing data on physical servers",
+            "b.) Accessing and storing data and programs over the internet",
+            "c.) Creating visual effects in video games",
+          ],
+          correct: 1,
+        },
 
-      {
-             question: "16. Which programming language is often used for developing mobile apps?",
-             answers: [
-               "a.) Java",
-               "b.) Ruby",
-               "c.) PHP"
-             ],
-             correct: 0
-           },
-           {
-             question: "17. What is the purpose of an IP address?",
-             answers: [
-               "a.) To identify a person's name",
-               "b.) To locate a website on the internet",
-               "c.) To store files on a computer"
-             ],
-             correct: 1
-           },
-           {
-             question: "18. Which HTML tag is used to create a hyperlink?",
-             answers: [
-               "a.) <link>",
-               "b.) <a>",
-               "c.) <hlink>"
-             ],
-             correct: 1
-           },
-           {
-             question: "19. What does RAM stand for?",
-             answers: [
-               "a.) Read-After-Modification",
-               "b.) Random Access Memory",
-               "c.) Read-And-Memory"
-             ],
-             correct: 1
-           },
-           {
-             question: "20. What is a 'bug' in programming?",
-             answers: [
-               "a.) An insect that disrupts code execution",
-               "b.) A feature that improves program performance",
-               "c.) An error in the program that causes unexpected behavior"
-             ],
-             correct: 2
-           },
-           {
-             question: "21. What is the primary function of an operating system?",
-             answers: [
-               "a.) To display advertisements",
-               "b.) To manage computer hardware and software resources",
-               "c.) To play games"
-             ],
-             correct: 1
-           },
-           {
-             question: "22. Which type of cyber attack involves flooding a network with excessive traffic to disrupt its normal operation?",
-             answers: [
-               "a.) Phishing",
-               "b.) Denial of Service (DoS)",
-               "c.) SQL Injection"
-             ],
-             correct: 1
-           },
-           {
-             question: "23. In programming, what is a 'loop'?",
-             answers: [
-               "a.) A bug in the code",
-               "b.) A type of variable",
-               "c.) A control structure that repeats a block of code"
-             ],
-             correct: 2
-           },
-           {
-             question: "24. Which tag is used to define an ordered list in HTML?",
-             answers: [
-               "a.) <ul>",
-               "b.) <ol>",
-               "c.) <li>"
-             ],
-             correct: 1
-           },
-           {
-             question: "25. What is encryption?",
-             answers: [
-               "a.) A way to make your computer run faster",
-               "b.) A method to make data unreadable by converting it into a secret code",
-               "c.) A way to organize files on your computer"
-             ],
-             correct: 1
-           },
-           const quizQuestions = [
-           {
-         question: "26. What is the purpose of a 'cookie' in web development?",
-         answers: [
-           "a.) A delicious treat for programmers",
-           "b.) A small piece of data stored on a user's device to track information",
-           "c.) A type of programming language"
-         ],
-         correct: 1
-       },
-       {
-         question: "27. What is a 'firewall' in the context of computer security?",
-         answers: [
-           "a.) A physical barrier to protect a computer from physical damage",
-           "b.) A software or hardware system that filters network traffic to block unauthorized access",
-           "c.) A type of computer virus"
-         ],
-         correct: 1
-       },
-       {
-         question: "28. What is the purpose of a 'compiler'?",
-         answers: [
-           "a.) To convert high-level programming code into machine code",
-           "b.) To translate languages between users",
-           "c.) To enhance graphics in video games"
-         ],
-         correct: 0
-       },
-       {
-         question: "29. What is 'phishing'?",
-         answers: [
-           "a.) The act of physically stealing computer hardware",
-           "b.) A method of fishing for information online",
-           "c.) Sending fake emails to trick individuals into revealing sensitive information"
-         ],
-         correct: 2
-       },
-       {
-         question: "30. Which programming language is often used for building web applications?",
-         answers: [
-           "a.) Java",
-           "b.) C++",
-           "c.) JavaScript"
-         ],
-         correct: 2
-       },
-       {
-         question: "31. What is 'SQL' used for in database management?",
-         answers: [
-           "a.) Designing graphics for websites",
-           "b.) Storing large files",
-           "c.) Managing and querying relational databases"
-         ],
-         correct: 2
-       },
-       {
-         question: "32. What is 'HTTPS'?",
-         answers: [
-           "a.) A protocol for sending emails",
-           "b.) A secure version of HTTP used for encrypted communication over the internet",
-           "c.) A programming language for scripting"
-         ],
-         correct: 1
-       },
-       {
-         question: "33. What does 'URL' stand for?",
-         answers: [
-           "a.) Universal Routing Language",
-           "b.) Uniform Resource Locator",
-           "c.) Unifying Relative Links"
-         ],
-         correct: 1
-       },
-       {
-         question: "34. What is 'Open Source' software?",
-         answers: [
-           "a.) Software that is not available for public use",
-           "b.) Software whose source code is available to the public for use and modification",
-           "c.) Software that is only used for business purposes"
-         ],
-         correct: 1
-       },
-       {
-         question: "35. What is 'cloud computing'?",
-         answers: [
-           "a.) Storing data on physical servers",
-           "b.) Accessing and storing data and programs over the internet",
-           "c.) Creating visual effects in video games"
-         ],
-         correct: 1
-       }
-       const quizQuestions = [
-       // ... (previous questions)
+        {
+          question: "36. What is a 'browser'?",
+          answers: [
+            "a.) A tool used for cutting and pasting text",
+            "b.) A software application used to access and view websites on the internet",
+            "c.) A type of computer virus",
+          ],
+          correct: 1,
+        },
+        {
+          question: "37. What is 'HTML' used for?",
+          answers: [
+            "a.) Storing user passwords securely",
+            "b.) Creating web pages and structuring content on the internet",
+            "c.) Sending and receiving emails",
+          ],
+          correct: 1,
+        },
+        {
+          question: "38. What does 'CSS' stand for?",
+          answers: [
+            "a.) Creative Style Selection",
+            "b.) Computer System Security",
+            "c.) Cascading Style Sheets",
+          ],
+          correct: 2,
+        },
+        {
+          question: "39. What is the purpose of 'git' in programming?",
+          answers: [
+            "a.) A version control system for tracking changes in code",
+            "b.) A programming language for graphics",
+            "c.) A type of computer hardware",
+          ],
+          correct: 0,
+        },
+        {
+          question: "40. What is a 'server' in computing?",
+          answers: [
+            "a.) A person who fixes computer hardware",
+            "b.) A type of computer virus",
+            "c.) A computer or system that provides services or resources to other computers over a network",
+          ],
+          correct: 2,
+        },
+        {
+          question: "41. What is the 'cloud' in cloud computing?",
+          answers: [
+            "a.) The physical location where data is stored",
+            "b.) A type of computer software",
+            "c.) Remote servers accessed over the internet to store and manage data",
+          ],
+          correct: 2,
+        },
+        {
+          question: "42. What is a 'bit'?",
+          answers: [
+            "a.) A small piece of computer hardware",
+            "b.) The basic unit of data in computing representing either a 0 or 1",
+            "c.) A measurement of file size",
+          ],
+          correct: 1,
+        },
+        {
+          question: "43. What does 'CPU' stand for?",
+          answers: [
+            "a.) Central Peripheral Unit",
+            "b.) Central Processing Unit",
+            "c.) Computer Peripheral Unit",
+          ],
+          correct: 1,
+        },
+        {
+          question: "44. What is a 'protocol' in networking?",
+          answers: [
+            "a.) A set of manners for computer users",
+            "b.) A type of computer virus",
+            "c.) A set of rules that define how data is transmitted over a network",
+          ],
+          correct: 2,
+        },
+        {
+          question: "45. What is a 'function' in programming?",
+          answers: [
+            "a.) A mathematical equation",
+            "b.) A type of computer hardware",
+            "c.) A reusable block of code that performs a specific task",
+          ],
+          correct: 2,
+        },
+        {
+          question: "46. What is 'RAM' used for in a computer?",
+          answers: [
+            "a.) Storing files for long-term use",
+            "b.) Displaying images on the screen",
+            "c.) Providing temporary memory storage for running programs and data",
+          ],
+          correct: 2,
+        },
+        {
+          question: "47. What does 'URL' stand for?",
+          answers: [
+            "a.) Universal Resource Locator",
+            "b.) Uniform Routing Language",
+            "c.) Unified Remote Link",
+          ],
+          correct: 0,
+        },
+        {
+          question: "48. What is a 'bug' in programming?",
+          answers: [
+            "a.) An insect that disrupts code execution",
+            "b.) A feature that improves program performance",
+            "c.) An error in the program that causes unexpected behavior",
+          ],
+          correct: 2,
+        },
+        {
+          question: "49. What is a 'boolean'?",
+          answers: [
+            "a.) A data type used for storing names",
+            "b.) A type of programming language",
+            "c.) A data type that represents true or false values",
+          ],
+          correct: 2,
+        },
+        {
+          question: "50. What is 'malware'?",
+          answers: [
+            "a.) A type of computer hardware",
+            "b.) Software that helps computers run faster",
+            "c.) Malicious software designed to harm or exploit computer systems",
+          ],
+          correct: 2,
+        },
+      ];
 
-       {
-         question: "36. What is a 'browser'?",
-         answers: [
-           "a.) A tool used for cutting and pasting text",
-           "b.) A software application used to access and view websites on the internet",
-           "c.) A type of computer virus"
-         ],
-         correct: 1
-       },
-       {
-         question: "37. What is 'HTML' used for?",
-         answers: [
-           "a.) Storing user passwords securely",
-           "b.) Creating web pages and structuring content on the internet",
-           "c.) Sending and receiving emails"
-         ],
-         correct: 1
-       },
-       {
-         question: "38. What does 'CSS' stand for?",
-         answers: [
-           "a.) Creative Style Selection",
-           "b.) Computer System Security",
-           "c.) Cascading Style Sheets"
-         ],
-         correct: 2
-       },
-       {
-         question: "39. What is the purpose of 'git' in programming?",
-         answers: [
-           "a.) A version control system for tracking changes in code",
-           "b.) A programming language for graphics",
-           "c.) A type of computer hardware"
-         ],
-         correct: 0
-       },
-       {
-         question: "40. What is a 'server' in computing?",
-         answers: [
-           "a.) A person who fixes computer hardware",
-           "b.) A type of computer virus",
-           "c.) A computer or system that provides services or resources to other computers over a network"
-         ],
-         correct: 2
-       },
-       {
-         question: "41. What is the 'cloud' in cloud computing?",
-         answers: [
-           "a.) The physical location where data is stored",
-           "b.) A type of computer software",
-           "c.) Remote servers accessed over the internet to store and manage data"
-         ],
-         correct: 2
-       },
-       {
-         question: "42. What is a 'bit'?",
-         answers: [
-           "a.) A small piece of computer hardware",
-           "b.) The basic unit of data in computing representing either a 0 or 1",
-           "c.) A measurement of file size"
-         ],
-         correct: 1
-       },
-       {
-         question: "43. What does 'CPU' stand for?",
-         answers: [
-           "a.) Central Peripheral Unit",
-           "b.) Central Processing Unit",
-           "c.) Computer Peripheral Unit"
-         ],
-         correct: 1
-       },
-       {
-         question: "44. What is a 'protocol' in networking?",
-         answers: [
-           "a.) A set of manners for computer users",
-           "b.) A type of computer virus",
-           "c.) A set of rules that define how data is transmitted over a network"
-         ],
-         correct: 2
-       },
-       {
-         question: "45. What is a 'function' in programming?",
-         answers: [
-           "a.) A mathematical equation",
-           "b.) A type of computer hardware",
-           "c.) A reusable block of code that performs a specific task"
-         ],
-         correct: 2
-       },
-       {
-         question: "46. What is 'RAM' used for in a computer?",
-         answers: [
-           "a.) Storing files for long-term use",
-           "b.) Displaying images on the screen",
-           "c.) Providing temporary memory storage for running programs and data"
-         ],
-         correct: 2
-       },
-       {
-         question: "47. What does 'URL' stand for?",
-         answers: [
-           "a.) Universal Resource Locator",
-           "b.) Uniform Routing Language",
-           "c.) Unified Remote Link"
-         ],
-         correct: 0
-       },
-       {
-         question: "48. What is a 'bug' in programming?",
-         answers: [
-           "a.) An insect that disrupts code execution",
-           "b.) A feature that improves program performance",
-           "c.) An error in the program that causes unexpected behavior"
-         ],
-         correct: 2
-       },
-       {
-         question: "49. What is a 'boolean'?",
-         answers: [
-           "a.) A data type used for storing names",
-           "b.) A type of programming language",
-           "c.) A data type that represents true or false values"
-         ],
-         correct: 2
-       },
-       {
-         question: "50. What is 'malware'?",
-         answers: [
-           "a.) A type of computer hardware",
-           "b.) Software that helps computers run faster",
-           "c.) Malicious software designed to harm or exploit computer systems"
-         ],
-         correct: 2
-       },
-           // list of 50 questions with answers and correct indices here
-         ];
+      const questionContainer = document.getElementById("question-container");
+      const questionElement = document.getElementById("question");
+      const answerButtonsElement = document.getElementById("answer-buttons");
+      const nextButton = document.getElementById("next-button");
 
-         const questionContainer = document.getElementById('question-container');
-         const questionElement = document.getElementById('question');
-         const answerButtonsElement = document.getElementById('answer-buttons');
-         const nextButton = document.getElementById('next-button');
+      let currentQuestionIndex = 0;
 
-         let currentQuestionIndex = 0;
+      function startQuiz() {
+        currentQuestionIndex = 0;
+        setNextQuestion();
+      }
 
-         function startQuiz() {
-           currentQuestionIndex = 0;
-           setNextQuestion();
-         }
+      function setNextQuestion() {
+        resetState();
+        showQuestion(quizQuestions[currentQuestionIndex]);
+      }
 
-         function setNextQuestion() {
-           resetState();
-           showQuestion(quizQuestions[currentQuestionIndex]);
-         }
+      function showQuestion(question) {
+        questionElement.innerText = question.question;
+        question.answers.forEach((answer, index) => {
+          const button = document.createElement("button");
+          button.innerText = answer;
+          button.classList.add("btn");
+          button.addEventListener("click", () => selectAnswer(index));
+          answerButtonsElement.appendChild(button);
+        });
+      }
 
-         function showQuestion(question) {
-           questionElement.innerText = question.question;
-           question.answers.forEach((answer, index) => {
-             const button = document.createElement('button');
-             button.innerText = answer;
-             button.classList.add('btn');
-             button.addEventListener('click', () => selectAnswer(index));
-             answerButtonsElement.appendChild(button);
-           });
-         }
+      function resetState() {
+        clearStatusClass(document.body);
+        nextButton.classList.add("hide");
+        while (answerButtonsElement.firstChild) {
+          answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+        }
+      }
 
-         function resetState() {
-           clearStatusClass(document.body);
-           nextButton.classList.add('hide');
-           while (answerButtonsElement.firstChild) {
-             answerButtonsElement.removeChild(answerButtonsElement.firstChild);
-           }
-         }
+      function selectAnswer(answerIndex) {
+        const correct = quizQuestions[currentQuestionIndex].correct;
+        if (answerIndex === correct) {
+          setStatusClass(document.body, "correct");
+        } else {
+          setStatusClass(document.body, "incorrect");
+        }
 
-         function selectAnswer(answerIndex) {
-           const correct = quizQuestions[currentQuestionIndex].correct;
-           if (answerIndex === correct) {
-             setStatusClass(document.body, 'correct');
-           } else {
-             setStatusClass(document.body, 'incorrect');
-           }
+        Array.from(answerButtonsElement.children).forEach((button, index) => {
+          setStatusClass(button, index === correct ? "correct" : "incorrect");
+        });
 
-           Array.from(answerButtonsElement.children).forEach((button, index) => {
-             setStatusClass(button, index === correct ? 'correct' : 'incorrect');
-           });
+        if (currentQuestionIndex < quizQuestions.length - 1) {
+          nextButton.classList.remove("hide");
+        } else {
+          nextButton.innerText = "Restart";
+          nextButton.classList.remove("hide");
+        }
+      }
 
-           if (currentQuestionIndex < quizQuestions.length - 1) {
-             nextButton.classList.remove('hide');
-           } else {
-             nextButton.innerText = 'Restart';
-             nextButton.classList.remove('hide');
-           }
-         }
+      function setStatusClass(element, status) {
+        element.classList.add(status);
+      }
 
-         function setStatusClass(element, status) {
-           element.classList.add(status);
-         }
+      function clearStatusClass(element) {
+        element.classList.remove("correct");
+        element.classList.remove("incorrect");
+      }
 
-         function clearStatusClass(element) {
-           element.classList.remove('correct');
-           element.classList.remove('incorrect');
-         }
+      nextButton.addEventListener("click", () => {
+        if (nextButton.innerText === "Restart") {
+          startQuiz();
+        } else {
+          currentQuestionIndex++;
+          setNextQuestion();
+        }
+      });
 
-         nextButton.addEventListener('click', () => {
-           if (nextButton.innerText === 'Restart') {
-             startQuiz();
-           } else {
-             currentQuestionIndex++;
-             setNextQuestion();
-           }
-         });
-
-         startQuiz();
+      startQuiz();
     </script>
   </body>
 </html>
