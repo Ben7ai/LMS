@@ -13,8 +13,9 @@ $db_name = 'lmsdatabase';
 
 $con = mysqli_connect($servername, $username, $password, $db_name);
 $userEmail = $_SESSION['email'];
+$userID = $_SESSION['id'];
 $stmt = $con->prepare('SELECT  first_name, middle_name, last_name, suffix, date_of_birth, current_address, city, province_state, zip_code, second_address, second_city, second_province_state, second_zip_code, elementary_school, high_school FROM user_profile WHERE id =  ?');
-$stmt->bind_param('s', $userEmail);
+$stmt->bind_param('i', $userID);
 $stmt->execute();
 $stmt->bind_result($firstName, $middleName, $lastName, $suffix, $birthdate, $currentAddress, $city, $province, $zipCode, $secondAddress, $secondCity, $secondProvince, $secondZipCode, $elementarySchool, $highSchool);
 $stmt->fetch();
@@ -28,7 +29,7 @@ $stmt->close();
 <head>
 <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MPPOS - Sign-in</title>
+        <title>Cyberians LMS: Preview Profile</title>
         <link rel="stylesheet" type="text/css" href="profile-style.css" />
         <!--Bootstrap Library-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
