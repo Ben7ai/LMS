@@ -2,7 +2,7 @@ html,
 body {
   margin: 0; /* Remove default body margin */
   padding: 0; /* Remove default body padding */
-  background-image: url('./public/loginbg.png'); /* Set background image */
+  background-image: url("./public/loginbg.png"); /* Set background image */
   background-size: cover; /* Cover the entire viewport with the background image */
   background-repeat: no-repeat; /* No repeating of the background image */
   background-position: center center; /* Center the background image */
@@ -10,9 +10,7 @@ body {
   height: 100vh;
 }
 
-
-
-#side-in-form{
+#side-in-form {
   position: relative;
   display: flex;
   text-align: center;
@@ -35,7 +33,6 @@ body {
   margin: auto; /* Center the form container */
   padding: 20px; /* Add padding for better readability */
   position: relative;
-
 }
 
 .custom-form-container {
@@ -80,4 +77,3 @@ body {
   color: white;
   opacity: 0.2;
 }
-

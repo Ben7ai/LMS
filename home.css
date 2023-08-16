@@ -1,7 +1,8 @@
 /* stylelint-disable stylistic/selector-list-comma-newline-after */
 
 .blog-header-logo {
-  font-family: "Amiri", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+  font-family: "Amiri", Georgia, "Times New Roman",
+    serif /*rtl:Amiri, Georgia, "Times New Roman", serif*/;
   font-size: 2.25rem;
 }
 
@@ -9,21 +10,18 @@
   text-decoration: none;
 }
 
-#header-catcher{
-  background-color: #9b1a1a31 ;
+#header-catcher {
+  background-color: #9b1a1a31;
   background-size: cover;
   text-align: center;
-  justify-content: center ;
+  justify-content: center;
   align-items: center;
-
 }
-
 
 body {
   padding-bottom: 3rem;
   color: rgb(var(--bs-tertiary-color-rgb));
 }
-
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -41,14 +39,13 @@ body {
 }
 
 .carousel-caption h1 {
-  font-family:
+  font-family: ;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
   height: 20rem;
 }
-
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -60,19 +57,22 @@ body {
 }
 /* rtl:begin:ignore */
 .marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
 }
 /* rtl:end:ignore */
-
 
 /* Featurettes
 ------------------------- */
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Oswald", sans-serif
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
 }
-
 
 /* The `#navigation-header` selector is targeting an element with the id "navigation-header" in the
 HTML markup. It sets the color of the text to "aliceblue", the font size to "30px", and applies
@@ -80,11 +80,10 @@ flexbox properties to center the element both horizontally and vertically within
 #navigation-header {
   color: aliceblue;
   font-size: 30px;
-  position: center ;
+  position: center;
   justify-content: center;
   align-items: center;
 }
-
 
 /* The CSS code `.carousel-inner .carousel-item .overlay` is targeting an element with the class
 "overlay" that is a descendant of an element with the class "carousel-item" which is a descendant of
@@ -114,9 +113,13 @@ an element with the class "carousel-inner". */
   flex: 0 0 auto;
 }
 
-.h-250 { height: 250px; }
+.h-250 {
+  height: 250px;
+}
 @media (min-width: 768px) {
-  .h-md-250 { height: 250px; }
+  .h-md-250 {
+    height: 250px;
+  }
 }
 
 /* Pagination */
@@ -139,6 +142,6 @@ an element with the class "carousel-inner". */
   position: center;
 }
 
-#bottom-cr{
+#bottom-cr {
   opacity: 0.5;
 }
