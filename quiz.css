@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: flex-start; /* Align to the left side */
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+.quiz-container {
+  max-width: 400px; /* Adjust container width as needed */
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 10px;
+}
+.question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.btn {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn:hover {
+  background-color: #e0e0e0;
+}
+.btn-correct {
+  background-color: #8bc34a;
+  color: white;
+}
+.btn-wrong {
+  background-color: #f44336;
+  color: white;
+}
+.btn-selected {
+  background-color: #2196f3;
+  color: white;
+}
+
+/* The `#navigation-header` selector is targeting an element with the id "navigation-header" in the
+HTML markup. It sets the color of the text to "aliceblue", the font size to "30px", and applies
+flexbox properties to center the element both horizontally and vertically within its container. */
+#navigation-header {
+  color: aliceblue;
+  font-size: 30px;
+  position: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-catcher {
+  background-color: #9b1a1a31;
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar-brand {
+  position: center;
+}
