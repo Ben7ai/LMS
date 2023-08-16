@@ -46,11 +46,11 @@ if ($stmt = $con->prepare('SELECT id, password FROM signup WHERE Email = ?')) {
             
         } else {
             // Incorrect password
-            echo 'Incorrect email and/or password!';
+            header('Location: error.html');
         }
     } else {
         // Incorrect username
-        echo 'Incorrect email and/or password!';
+        header('Location: error.html');
     }
 
 

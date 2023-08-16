@@ -6,7 +6,7 @@
 
 
 
-    $con = mysqli_connect("localhost", "root", "", "lmsdatabase");
+    $conn = mysqli_connect("localhost", "root", "", "lmsdatabase");
 
         
         if(mysqli_connect_errno()){
@@ -21,7 +21,7 @@
             exit('Email is not valid!');
         }
 
-        if ($stmt = $con->prepare('SELECT id FROM signup WHERE email = ?')) {
+        if ($stmt = $conn->prepare('SELECT id FROM signup WHERE email = ?')) {
             $stmt->bind_param('s', $_POST['Email']);
             $stmt->execute();
             $stmt->store_result();
@@ -36,10 +36,11 @@
              $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
              $stmt->bind_param('ss', $_POST['Email'], $password);
              $stmt->execute();
+             header('Location: login.html');
         }
 
         else{
-            echo 'Error';
+            header('Location: error.html');
         }
  
 

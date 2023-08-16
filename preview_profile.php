@@ -6,26 +6,19 @@
     exit;
   }
 
-  $servername = 'localhost';
-  $username = 'root';
-  $password = '';
-  $db_name = 'lmsdatabase';
+$servername = 'localhost';
+$username = 'root';
+$password = '';
+$db_name = 'lmsdatabase';
 
-  $con = mysqli_connect($servername, $username, $password, $db_name);
-
-  if (mysqli_connect_errno()){
-    exit('Failed to connect to MySQL: ' .mysqli_connect_error());
-  }
-
-  $userEmail = $_SESSION['email'];
-  $stmt = $con->prepare('SELECT first_name, middle_name, last_name, suffix, date_of_birth, current_address, city, province_state, zip_code, second_address, second_city, second_province_state, second_zip_code, elementary_school, high_school FROM user_profile WHERE email = ?');
-
-  $stmt->bind_param('s', $userEmail);
-  $stmt->execute();
-  $stmt->bind_result($firstName, $middleName, $lastName, $suffix, $birthdate, $currentAddress, $city, $province, $zipCode, $secondAddress, $secondCity, $secondProvince, $secondZipCode, $elementarySchool, $highSchool);
-  $stmt->fetch();
-  $stmt->close();
-
+$con = mysqli_connect($servername, $username, $password, $db_name);
+$userEmail = $_SESSION['email'];
+$stmt = $con->prepare('SELECT  first_name, middle_name, last_name, suffix, date_of_birth, current_address, city, province_state, zip_code, second_address, second_city, second_province_state, second_zip_code, elementary_school, high_school FROM user_profile WHERE id =  ?');
+$stmt->bind_param('s', $userEmail);
+$stmt->execute();
+$stmt->bind_result($firstName, $middleName, $lastName, $suffix, $birthdate, $currentAddress, $city, $province, $zipCode, $secondAddress, $secondCity, $secondProvince, $secondZipCode, $elementarySchool, $highSchool);
+$stmt->fetch();
+$stmt->close();
 ?>
 
 
@@ -42,24 +35,47 @@
 </head>
 <body>
 
-    <!--Navbar-->
-    <nav class="navbar" style="background-color: #e3f2fd;">
+    <!--Navigation Bar-->
+  <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="home_page.php">
-        <img src="images/mpposlogo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-        MyPersonalPOS
+      <a class="navbar-brand" href="home.html">
+        <img src="./dash-board-pics/logo@2x.png" alt="Logo"  height="30" class="d-inline-block align-text-top">
+        AMA University
       </a>
-
-     
-      <div>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.php">Log-out</a>
-          </li>
-        </ul>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="courses.html">My Courses</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Student
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="preview_profile.php">Profile</a></li>
+                <li><a class="dropdown-item" href="profile.html">Create Profile</a></li>
+              </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="login.php">Log Out</a>
+              </li>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
+  
   <!--Title-->
   <h1 class = "text-center">Profile Page</h1>
   <hr>
@@ -68,42 +84,25 @@
 
   <div class="container-fluid">
     <h3>Account Details</h3>
+    <hr>
+    <h4>User Profile:</h4>
 
     <table class="table table-striped table-hover">
       <tr class="table-secondary">
-        <td>
-          Username:
-        </td>
-        <td>
-          <?=$_SESSION['name']?>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Password:
-        </td>
-
-        <td>
-          <?=$password?>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          E-mail:
-        </td>
-        <td>
-          <?=$email?>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
+      <td>
           First Name:
         </td>
         <td>
           <?=$firstName?>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Middle Name:
+        </td>
+        <td>
+          <?=$middleName?>
         </td>
       </tr>
 
@@ -116,43 +115,145 @@
         </td>
       </tr>
 
-      
       <tr>
         <td>
-          Gender:
+          Suffix:
         </td>
         <td>
-          <?=$gender?>
+          <?=$suffix?>
+        </td>
+      </tr>
+
+      <tr>
+      <td>
+          Email:
+        </td>
+        <td>
+          <?=$_SESSION['email']?>
         </td>
       </tr>
 
       <tr>
         <td>
-          Birthday:
+          Date of Birth:
         </td>
         <td>
           <?=$birthdate?>
         </td>
       </tr>
+    </table>
 
-      <tr>
-        <td>
-          Age:
+        <hr>
+
+    <h4>Current Residence:</h4>
+
+    <table class="table table-striped table-hover">
+      <tr class="table-secondary">
+      <td>
+          Current Address:
         </td>
         <td>
-          <?=$age?>
+          <?=$currentAddress?>
         </td>
       </tr>
 
+      <tr>
+      <td>
+          City:
+        </td>
+        <td>
+          <?=$city?>
+        </td>
+      </tr>
 
+      <tr>
+      <td>
+          Province/State:
+        </td>
+        <td>
+          <?=$province?>
+        </td>
+      </tr>
 
-    </table>
+      <tr>
+      <td>
+          Zip Code:
+        </td>
+        <td>
+          <?=$zipCode?>
+        </td>
+      </tr>
 
+      </table>
+      <h4>Second Residence:</h4>
 
+<table class="table table-striped table-hover">
+  <tr class="table-secondary">
+  <td>
+      Second Address:
+    </td>
+    <td>
+      <?=$secondAddress?>
+    </td>
+  </tr>
+
+  <td>
+      City:
+    </td>
+    <td>
+      <?=$secondCity?>
+    </td>
+  </tr>
+
+<td>
+      Province/State:
+    </td>
+    <td>
+      <?=$secondProvince?>
+    </td>
+  </tr>
+
+  <td>
+      Zip Code:
+    </td>
+    <td>
+      <?=$secondZipCode?>
+    </td>
+  </tr>
   </div>
+  </table>
+  <h4>Education</h4>
 
+<table class="table table-striped table-hover">
+  <tr class="table-secondary">
+  <td>
+      Elementary School:
+    </td>
+    <td>
+      <?=$elementarySchool?>
+    </td>
+  </tr>
 
+  <td>
+      Highschool:
+    </td>
+    <td>
+      <?=$highSchool?>
+    </td>
+  </tr>
+</table>
+
+</table>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
 </body>
+
+<footer class="text-body-secondary py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <a>&copy; 2023 - 2023 Cyberians LMS</a>
+  </div>
+</footer>
 </html>

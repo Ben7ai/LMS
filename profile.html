@@ -2,53 +2,54 @@
 <html>
   <head>
     <title>Cyberian LMS: Profile</title>
-    <link rel="stylesheet" href="preview_profile.css" />
+    <link rel="stylesheet" href="profile.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
   <body>
-  <!--Navigation Bar-->
-  <nav class="navbar bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/home.html">
-        <img src="./dash-board-pics/logo@2x.png" alt="Logo"  height="30" class="d-inline-block align-text-top">
-        AMA University
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/home.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./courses.html">My Courses</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Student
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-              </ul>
+    <!--Navigation Bar-->
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+          <img src="./dash-board-pics/logo@2x.png" alt="Logo"  height="30" class="d-inline-block align-text-top">
+          AMA University
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link" href="./login.html">Log Out</a>
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
-            </li>
-          </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="courses.html">My Courses</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Student
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="preview_profile.php">Profile</a></li>
+                  <li><a class="dropdown-item" href="profile.html">Create Profile</a></li>
+                </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.php">Log Out</a>
+                </li>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
-  
+    </nav>
+
     <div class="profile-container">
       <h1>User Profile</h1>
-      <form method="post"  action="profile_user.php" id="profile-form">
+      <form method="post" action="profile_user.php" id="profile-form">
         <div class="form-group">
           <label for="first-name">First Name:</label>
           <input name="fn" type="text" id="first-name" name="first-name" required />
@@ -64,10 +65,6 @@
         <div class="form-group">
           <label for="suffix">Suffix:</label>
           <input name="sx" type="text" id="suffix" name="suffix" />
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input name="em" type="email" id="email" name="email" required />
         </div>
         <div class="form-group">
           <label for="birthdate">Date of Birth:</label>
@@ -88,7 +85,8 @@
           <input name="c" type="text" id="city" name="city" required />
         </div>
         <div class="form-group">
-          <label for="province">Province/State:</label>
+          
+        <label for="province">Province/State:</label>
           <input name="ps" type="text" id="province" name="province" required />
         </div>
         <div class="form-group">
@@ -132,7 +130,8 @@
           <a>&copy; 2023 - 2023 Cyberians LMS</a>
         </div>
       </footer>
+
     <!-- Bootstrap scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
 </html>
