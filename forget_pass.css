@@ -1,3 +1,4 @@
+/* Apply styles to the HTML and body elements */
 html,
 body {
   margin: 0; /* Remove default body margin */
@@ -7,73 +8,83 @@ body {
   background-repeat: no-repeat; /* No repeating of the background image */
   background-position: center center; /* Center the background image */
   background-attachment: fixed; /* Keep the background fixed relative to the viewport */
-  height: 100vh;
+  height: 100vh; /* Set the height of the body to 100% of the viewport height */
 }
 
+/* Apply styles to the element with id "side-in-form" */
 #side-in-form {
-  position: relative;
-  display: flex;
-  text-align: center;
+  position: relative; /* Set the position as relative for positioning context */
+  display: flex; /* Use flex display for its children */
+  text-align: center; /* Center-align the text content */
 }
 
+/* Apply styles to the element with class "outer-container" */
 .outer-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 98vh;
+  display: flex; /* Use flex display for its children */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: relative; /* Set the position as relative for positioning context */
+  height: 98vh; /* Set the height of the container to 98% of the viewport height */
 }
 
+/* Apply styles to the element with class "custom-main" */
 .custom-main {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Use flex display for its children */
+  flex-direction: column; /* Arrange children in a column */
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
-  width: 50%; /* Adjust the width as needed */
+  width: 50%; /* Set the width to 50% */
   margin: auto; /* Center the form container */
   padding: 20px; /* Add padding for better readability */
-  position: relative;
+  position: relative; /* Set the position as relative for positioning context */
 }
 
+/* Apply styles to the element with class "custom-form-container" */
 .custom-form-container {
-  background-color: white;
-  padding: 50px; /* Adjust padding as needed */
-  flex: 1; /* Allow the form container to grow to fill the available space */
-  border-radius: 30px;
+  background-color: white; /* Set background color */
+  padding: 50px; /* Set padding for the container */
+  flex: 1; /* Allow the container to grow and fill available space */
+  border-radius: 30px; /* Apply rounded corners */
 }
 
+/* Apply styles to elements with class "custom-form" */
 .custom-form {
-  text-align: center; /* Align form elements to the right */
+  text-align: center; /* Align form elements to the center */
 }
 
+/* Apply styles to elements with class "form-signin" */
 .form-signin {
-  max-width: 530px;
-  padding: 1px;
+  max-width: 530px; /* Set the maximum width of the form */
+  padding: 1px; /* Add a small padding */
 }
 
+/* Apply styles to elements with class "form-floating" when focused */
 .form-signin .form-floating:focus-within {
-  z-index: 3;
+  z-index: 3; /* Set the stacking order on focus */
 }
 
+/* Apply styles to input fields with type "email" within "form-signin" */
 .form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  margin-bottom: -1px; /* Adjust margin for input fields */
+  border-bottom-right-radius: 0; /* Remove bottom-right border radius */
+  border-bottom-left-radius: 0; /* Remove bottom-left border radius */
 }
 
+/* Apply styles to input fields with type "password" within "form-signin" */
 .form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  margin-bottom: 10px; /* Adjust margin for input fields */
+  border-top-left-radius: 0; /* Remove top-left border radius */
+  border-top-right-radius: 0; /* Remove top-right border radius */
 }
 
+/* Apply styles to the element with id "bottom-cr" */
 #bottom-cr {
-  position: fixed;
-  height: -100vh;
+  position: fixed; /* Set the position as fixed */
+  height: -100vh; /* Set a negative height to move it off-screen */
   bottom: 0; /* Adjust the distance from the bottom */
-  left: 0;
-  right: 0;
-  text-align: center;
-  color: white;
-  opacity: 0.2;
+  left: 0; /* Align it to the left */
+  right: 0; /* Align it to the right */
+  text-align: center; /* Center-align the text content */
+  color: white; /* Set text color */
+  opacity: 0.2; /* Set opacity level */
 }

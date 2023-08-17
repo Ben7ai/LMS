@@ -1,16 +1,26 @@
 /* Custom CSS */
+
+/* Set the background image using a gradient */
 body {
-  background-image: linear-gradient(180deg, var(--bs-secondary-bg), var(--bs-body-bg) 100px, var(--bs-body-bg));
+  background-image: linear-gradient(
+    180deg,
+    var(--bs-secondary-bg),
+    var(--bs-body-bg) 100px,
+    var(--bs-body-bg)
+  );
 }
 
+/* Set the maximum width for the main container */
 .container {
   max-width: 960px;
 }
 
+/* Set the maximum width for the pricing header */
 .pricing-header {
   max-width: 700px;
 }
 
+/* Style for placeholder images */
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -19,21 +29,23 @@ body {
   user-select: none;
 }
 
+/* Styling for the description text within cards */
 .card-description {
   text-decoration: none;
   color: inherit; /* Use the default text color */
 }
 
-/* Change the cursor to indicate it's a link */
+/* Change the cursor to indicate it's a link when hovering over description */
 .card-description:hover {
   cursor: pointer;
 }
 
-/* Add this CSS to your stylesheet or within a <style> tag in your HTML */
+/* Styling for cards */
 .card {
   height: 350px; /* Adjust the height to your desired fixed size */
 }
 
+/* Styling for the card body */
 .card-body {
   display: flex;
   flex-direction: column;
@@ -41,10 +53,12 @@ body {
   height: 100%; /* Ensure card body takes full height of the card */
 }
 
+/* Styling for card links */
 .card-link {
   text-decoration: none;
 }
 
+/* Styling for card descriptions */
 .card-description {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -52,11 +66,13 @@ body {
   text-align: center; /* Center the title */
 }
 
+/* Styling for flex layout with justified content */
 .d-flex {
   justify-content: space-between; /* Justify the content */
   align-items: center; /* Center vertically within the button row */
 }
 
+/* Styling for card text */
 .card-text {
   flex-grow: 1; /* Allow the paragraph to grow within the available space */
   display: -webkit-box;

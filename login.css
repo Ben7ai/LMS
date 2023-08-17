@@ -1,3 +1,4 @@
+/* Set the default margin, padding, and background for the entire page */
 html,
 body {
   margin: 0; /* Remove default body margin */
@@ -7,73 +8,83 @@ body {
   background-repeat: no-repeat; /* No repeating of the background image */
   background-position: center center; /* Center the background image */
   background-attachment: fixed; /* Keep the background fixed relative to the viewport */
-  height: 100vh;
+  height: 100vh; /* Set the height of the body to 100% of the viewport height */
 }
 
+/* Styling for the side-in form section */
 #side-in-form {
-  position: relative;
-  display: flex;
-  text-align: center;
+  position: relative; /* Position the form relatively */
+  display: flex; /* Display flex to align its contents */
+  text-align: center; /* Align the text in the center */
 }
 
+/* Styling for the outer container */
 .outer-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 98vh;
+  display: flex; /* Display flex to center its contents */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: relative; /* Position the container relatively */
+  height: 98vh; /* Set the height of the container to 98% of the viewport height */
 }
 
+/* Styling for the main content container */
 .custom-main {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Display flex to arrange its contents */
+  flex-direction: column; /* Arrange items vertically */
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
   width: 50%; /* Adjust the width as needed */
   margin: auto; /* Center the form container */
   padding: 20px; /* Add padding for better readability */
-  position: relative;
+  position: relative; /* Position the container relatively */
 }
 
+/* Styling for the form container */
 .custom-form-container {
-  background-color: white;
+  background-color: white; /* Set the background color */
   padding: 50px; /* Adjust padding as needed */
   flex: 1; /* Allow the form container to grow to fill the available space */
-  border-radius: 30px;
+  border-radius: 30px; /* Apply rounded corners */
 }
 
+/* Styling for the form elements */
 .custom-form {
-  text-align: center; /* Align form elements to the right */
+  text-align: center; /* Align form elements to the center */
 }
 
+/* Styling for the form inputs */
 .form-signin {
-  max-width: 530px;
-  padding: 1px;
+  max-width: 530px; /* Set the maximum width */
+  padding: 1px; /* Add padding to the form */
 }
 
+/* Styling for the form inputs when focused */
 .form-signin .form-floating:focus-within {
-  z-index: 3;
+  z-index: 3; /* Increase the z-index when the input is focused */
 }
 
+/* Styling for the email input */
 .form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  margin-bottom: -1px; /* Adjust margin to create a seamless look */
+  border-bottom-right-radius: 0; /* Remove border radius from bottom right corner */
+  border-bottom-left-radius: 0; /* Remove border radius from bottom left corner */
 }
 
+/* Styling for the password input */
 .form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  margin-bottom: 10px; /* Add margin at the bottom */
+  border-top-left-radius: 0; /* Remove border radius from top left corner */
+  border-top-right-radius: 0; /* Remove border radius from top right corner */
 }
 
+/* Styling for the bottom credits */
 #bottom-cr {
-  position: fixed;
-  height: -100vh;
+  position: fixed; /* Fix the position at the bottom */
+  height: -100vh; /* Hide the content */
   bottom: 0; /* Adjust the distance from the bottom */
-  left: 0;
-  right: 0;
-  text-align: center;
-  color: white;
-  opacity: 0.2;
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  text-align: center; /* Align text to the center */
+  color: white; /* Set the text color */
+  opacity: 0.2; /* Set the opacity for a semi-transparent effect */
 }

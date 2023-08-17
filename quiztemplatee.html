@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Set character encoding and viewport for responsive design -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cyberians LMS: Quiz Template</title>
 
+    <!-- Include custom CSS stylesheet -->
     <link href="quiz.css" rel="stylesheet" />
   </head>
-
   <body>
+    <!-- Include Bootstrap CSS for styling -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,14 +18,19 @@
       crossorigin="anonymous"
     />
 
+    <!-- Quiz container -->
     <div class="quiz-container">
+      <!-- Question display -->
       <div class="question"></div>
+      <!-- Answers display -->
       <div class="answers"></div>
+      <!-- Navigation buttons -->
       <button class="btn" id="backBtn" disabled>Back</button>
       <button class="btn" id="nextBtn">Next</button>
       <button class="btn" id="showResultBtn">Show Result</button>
     </div>
 
+    <!-- JavaScript for quiz functionality -->
     <script>
       const questions = [
         {
@@ -197,6 +204,7 @@
       // Initialize the quiz
       showQuestion(currentQuestion);
     </script>
+    <!-- Include Bootstrap JavaScript bundle for interactivity -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

@@ -1,3 +1,4 @@
+/* Set default styles for the HTML and body elements */
 html,
 body {
   margin: 0; /* Remove default body margin */
@@ -7,23 +8,26 @@ body {
   background-repeat: no-repeat; /* No repeating of the background image */
   background-position: center center; /* Center the background image */
   background-attachment: fixed; /* Keep the background fixed relative to the viewport */
-  height: 100vh;
+  height: 100vh; /* Set the height to 100% of the viewport height */
 }
 
+/* Styles for the sign-in form container */
 #side-in-form {
   position: relative;
   display: flex;
   text-align: center;
 }
 
+/* Outer container to center content vertically and horizontally */
 .outer-container {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 98vh;
+  height: 98vh; /* Set the height to 98% of the viewport height */
 }
 
+/* Styles for the main form section */
 .custom-main {
   display: flex;
   flex-direction: column;
@@ -35,6 +39,7 @@ body {
   position: relative;
 }
 
+/* Styles for the container of the custom form */
 .custom-form-container {
   background-color: white;
   padding: 50px; /* Adjust padding as needed */
@@ -42,31 +47,37 @@ body {
   border-radius: 30px;
 }
 
+/* Styles for the custom form */
 .custom-form {
-  text-align: center; /* Align form elements to the right */
+  text-align: center; /* Align form elements to the center */
 }
 
+/* Styles for the form-signin class */
 .form-signin {
   max-width: 530px;
   padding: 1px;
 }
 
+/* Styles for the form-floating class when focused */
 .form-signin .form-floating:focus-within {
   z-index: 3;
 }
 
+/* Styles for email input fields */
 .form-signin input[type="email"] {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
+/* Styles for password input fields */
 .form-signin input[type="password"] {
   margin-bottom: -1px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
+/* Styles for the bottom copyright information */
 #bottom-cr {
   position: fixed;
   height: -100vh;
