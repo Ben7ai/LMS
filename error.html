@@ -92,6 +92,8 @@
       .bd-mode-toggle {
         z-index: 1500;
       }
+</style>
+
     </style>
 
     <!-- Custom styles for this template -->
@@ -108,9 +110,9 @@
       </header>
 
       <main class="px-3">
-        <p id="tmb" >Error was found, please click on the text below.</p>
+        <p id="head">Error was found, please click on the text below.</p>
         <button id="tmb" onclick="backButton()" style="background: none; border: none; padding: 0;">
-            Take me Back!
+            Return
         </button>
         <script>
             function backButton() {
@@ -119,11 +121,18 @@
         </script>
         <style>
           
+            #head{
+              color: red;
+              font-family: 'Handjet', cursive;
+              font-size: 30px;
+            }
             #tmb {
-                color: white; /* Set the text color */
-                font-size: 30px; /* Adjust the font size */
+                color: rgb(14, 179, 255); /* Set the text color */
+                font-size: 50px; /* Adjust the font size */
                 font-family: 'Handjet', cursive;
             }
+
+
         </style>
     </main>
 
