@@ -1,9 +1,12 @@
+/* Set font family and reset margin and padding */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
 }
+
+/* Styling for the profile container */
 .profile-container {
   max-width: 800px;
   margin: 30px auto;
@@ -12,14 +15,20 @@ body {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+/* Styling for form groups */
 .form-group {
   margin-bottom: 15px;
 }
+
+/* Styling for labels */
 label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
 }
+
+/* Styling for text inputs, email inputs, date inputs, and textarea */
 input[type="text"],
 input[type="email"],
 input[type="date"],
@@ -30,6 +39,8 @@ textarea {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+/* Styling for select dropdowns */
 select {
   width: 100%;
   padding: 8px;
@@ -37,6 +48,8 @@ select {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+/* Styling for buttons */
 button {
   padding: 10px 20px;
   background-color: #007bff;

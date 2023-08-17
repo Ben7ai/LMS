@@ -1,147 +1,147 @@
+/* Disable a specific stylelint rule for the following block */
 /* stylelint-disable stylistic/selector-list-comma-newline-after */
 
+/* Styling for the blog header logo */
 .blog-header-logo {
-  font-family: "Amiri", Georgia, "Times New Roman",
-    serif /*rtl:Amiri, Georgia, "Times New Roman", serif*/;
-  font-size: 2.25rem;
+  font-family: "Amiri", Georgia, "Times New Roman", serif; /* Define font-family */
+  font-size: 2.25rem; /* Set font size */
 }
 
+/* Styling for the blog header logo on hover */
 .blog-header-logo:hover {
-  text-decoration: none;
+  text-decoration: none; /* Remove text underline on hover */
 }
 
+/* Styling for the header catcher */
 #header-catcher {
-  background-color: #9b1a1a31;
-  background-size: cover;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+  background-color: #9b1a1a31; /* Set background color with alpha transparency */
+  background-size: cover; /* Cover the background */
+  text-align: center; /* Align text to center */
+  justify-content: center; /* Align content horizontally */
+  align-items: center; /* Align content vertically */
 }
 
+/* Styling for the body */
 body {
-  padding-bottom: 3rem;
-  color: rgb(var(--bs-tertiary-color-rgb));
+  padding-bottom: 3rem; /* Add padding at the bottom */
+  color: rgb(var(--bs-tertiary-color-rgb)); /* Set text color */
 }
 
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
+/* Styling for the carousel */
 .carousel {
-  margin-bottom: rem;
+  margin-bottom: rem; /* Add margin at the bottom */
 }
-/* Since positioning the image, we need to help out the caption */
+
+/* Styling for the carousel caption */
 .carousel-caption {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50%; /* Make sure the caption takes the full height of the carousel item */
+  display: flex; /* Display as flex */
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Align content horizontally */
+  height: 50%; /* Set caption height */
 }
 
-.carousel-caption h1 {
-  font-family: ;
-}
-
-/* Declare heights because of positioning of img element */
+/* Styling for each carousel item */
 .carousel-item {
-  height: 20rem;
+  height: 20rem; /* Set height for carousel items */
 }
 
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
+/* Styling for marketing content columns */
 .marketing .col-lg-4 {
-  margin-bottom: 1.5rem;
-  text-align: center;
+  margin-bottom: 1.5rem; /* Add margin at the bottom */
+  text-align: center; /* Align text to center */
 }
-/* rtl:begin:ignore */
+
+/* Styling for p elements within marketing content columns */
 .marketing .col-lg-4 p {
-  margin-right: 0.75rem;
-  margin-left: 0.75rem;
+  margin-right: 0.75rem; /* Add margin to the right */
+  margin-left: 0.75rem; /* Add margin to the left */
 }
-/* rtl:end:ignore */
 
-/* Featurettes
-------------------------- */
-
+/* Styling for headings */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", sans-serif; /* Set font-family */
 }
 
-/* The `#navigation-header` selector is targeting an element with the id "navigation-header" in the
-HTML markup. It sets the color of the text to "aliceblue", the font size to "30px", and applies
-flexbox properties to center the element both horizontally and vertically within its container. */
+/* Styling for the navigation header */
 #navigation-header {
-  color: aliceblue;
-  font-size: 30px;
-  position: center;
-  justify-content: center;
-  align-items: center;
+  color: aliceblue; /* Set text color */
+  font-size: 30px; /* Set font size */
+  position: center; /* Set position */
+  justify-content: center; /* Align content horizontally */
+  align-items: center; /* Align content vertically */
 }
 
-/* The CSS code `.carousel-inner .carousel-item .overlay` is targeting an element with the class
-"overlay" that is a descendant of an element with the class "carousel-item" which is a descendant of
-an element with the class "carousel-inner". */
+/* Styling for the overlay element within carousel items */
 .carousel-inner .carousel-item .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0); /* Fully transparent initially */
-  transition: background-color 0.3s ease-in-out;
+  position: absolute; /* Set position to absolute */
+  top: 0; /* Position at the top */
+  left: 0; /* Position at the left */
+  width: 100%; /* Set width to 100% */
+  height: 100%; /* Set height to 100% */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0
+  ); /* Set initial background color with alpha transparency */
+  transition: background-color 0.3s ease-in-out; /* Add transition effect */
 }
 
-/* Set the hover effect */
+/* Styling for the overlay on hover */
 .carousel-inner .carousel-item:hover .overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black on hover */
+  background-color: rgba(0, 0, 0, 0.5); /* Set background color on hover */
 }
 
-/* Additional styles for better visibility of the caption text on hover */
+/* Additional styles for the caption on hover */
 .carousel-inner .carousel-item:hover .carousel-caption {
-  opacity: 1;
+  opacity: 1; /* Set opacity on hover */
   /* Add other styles as needed */
 }
 
+/* Styling for flex-auto class */
 .flex-auto {
-  flex: 0 0 auto;
+  flex: 0 0 auto; /* Set flex properties */
 }
 
+/* Styling for h-250 class */
 .h-250 {
-  height: 250px;
+  height: 250px; /* Set height */
 }
+
+/* Media query for larger screens */
 @media (min-width: 768px) {
   .h-md-250 {
-    height: 250px;
+    height: 250px; /* Set height for medium screens */
   }
 }
 
-/* Pagination */
+/* Styling for blog pagination */
 .blog-pagination {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem; /* Add margin at the bottom */
 }
 
-/*
- * Blog posts
- */
+/* Styling for blog posts */
 .blog-post {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem; /* Add margin at the bottom */
 }
+
+/* Styling for blog post metadata */
 .blog-post-meta {
-  margin-bottom: 1.25rem;
-  color: #727272;
+  margin-bottom: 1.25rem; /* Add margin at the bottom */
+  color: #727272; /* Set text color */
 }
 
+/* Styling for the navbar brand */
 #navbar-brand {
-  position: center;
+  position: center; /* Set position */
 }
 
+/* Styling for bottom credits */
 #bottom-cr {
-  opacity: 0.5;
+  opacity: 0.5; /* Set opacity */
 }
